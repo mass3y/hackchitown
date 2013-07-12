@@ -1,0 +1,36 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>Edit <%= @model001.service_request_id %></h1>
+    <a href="<%= url_for :action => :show, :id => @model001.object %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+    <a href="<%= url_for :action => :delete, :id => @model001.object %>" class="ui-btn-right" data-icon="delete" data-direction="reverse">
+      Delete
+    </a>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :update %>">
+      <input type="hidden" name="id" value="<%= @model001.object %>"/>
+      
+          <div data-role="fieldcontain">
+            <label for="model001[service_request_id]" class="fieldLabel">Service request</label>
+            <input type="text" id="model001[service_request_id]" name="model001[service_request_id]" value="<%= @model001.service_request_id %>" <%= placeholder( "Service request" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="model001[requested_datetime]" class="fieldLabel">Requested datetime</label>
+            <input type="text" id="model001[requested_datetime]" name="model001[requested_datetime]" value="<%= @model001.requested_datetime %>" <%= placeholder( "Requested datetime" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="model001[address]" class="fieldLabel">Address</label>
+            <input type="text" id="model001[address]" name="model001[address]" value="<%= @model001.address %>" <%= placeholder( "Address" ) %> />
+          </div>
+      
+      <input type="submit" value="Update"/>
+    </form>
+  </div>
+
+</div>

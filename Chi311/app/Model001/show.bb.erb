@@ -1,0 +1,30 @@
+<div data-role="page" data-add-back-btn="true">
+
+  <div data-role="header" data-position="inline">
+    <%= link_to "Back", :action => :index %>
+    <h1><%= @model001.service_request_id %></h1>
+    <%= link_to "Edit", :action => :edit, :id => @model001.object %>
+  </div>
+
+  <div data-role="content">
+    <table>
+      
+      <tr>
+    	<td class="itemLabel">ServiceRequestId</td>
+        <td class="itemValue"><%= @model001.service_request_id%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">RequestedDatetime</td>
+        <td class="itemValue"><%= @model001.requested_datetime%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Address</td>
+        <td class="itemValue"><%= @model001.address%></td>
+      </tr>
+      
+    </table>
+  </div>
+
+</div>

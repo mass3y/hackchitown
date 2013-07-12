@@ -1,0 +1,26 @@
+#sdk: "C:/MotorolaRhoMobileSuite2.2.1.13/ruby/lib/ruby/gems/1.9.1/gems/rhodes-3.5.1.13"
+sdkversion: "3.5.0"
+name: "Chi311"
+version: 1.0
+vendor: "rhomobile"
+build: "debug"
+bbver: 4.6
+applog: "rholog.txt"
+iphone:
+  configuration: "Release"
+  sdk: "iphonesimulator5.0"
+  provisionprofile: 
+  codesignidentity: 
+  entitlements: 
+  BundleIdentifier: "com.rhomobile.chi311"
+  BundleURLScheme: "chi311"
+wp:
+  productid: "51aee680-cbf3-0130-d094-100ba9e7e4cc"
+symbian:
+  uid: "0xe6ac5f4f"
+android:
+  version: "2.3.3"
+  emulator: "test"
+extensions:
+  - json
+  - another-extension

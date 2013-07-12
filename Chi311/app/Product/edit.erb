@@ -1,0 +1,36 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>Edit <%= @product.SKU %></h1>
+    <a href="<%= url_for :action => :show, :id => @product.object %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+    <a href="<%= url_for :action => :delete, :id => @product.object %>" class="ui-btn-right" data-icon="delete" data-direction="reverse">
+      Delete
+    </a>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :update %>">
+      <input type="hidden" name="id" value="<%= @product.object %>"/>
+      
+          <div data-role="fieldcontain">
+            <label for="product[SKU]" class="fieldLabel">Sku</label>
+            <input type="text" id="product[SKU]" name="product[SKU]" value="<%= @product.SKU %>" <%= placeholder( "Sku" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="product[Desc]" class="fieldLabel">Desc</label>
+            <input type="text" id="product[Desc]" name="product[Desc]" value="<%= @product.Desc %>" <%= placeholder( "Desc" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="product[Qty]" class="fieldLabel">Qty</label>
+            <input type="text" id="product[Qty]" name="product[Qty]" value="<%= @product.Qty %>" <%= placeholder( "Qty" ) %> />
+          </div>
+      
+      <input type="submit" value="Update"/>
+    </form>
+  </div>
+
+</div>

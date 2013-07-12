@@ -1,0 +1,35 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>New <%= @product.title %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :create %>">
+      <input type="hidden" name="id" value="<%= @product.object %>"/>
+
+      
+          <div data-role="fieldcontain">
+            <label for="product[SKU]" class="fieldLabel">Sku</label>
+            <input type="text" id="product[SKU]" name="product[SKU]" <%= placeholder("Sku") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="product[Desc]" class="fieldLabel">Desc</label>
+            <input type="text" id="product[Desc]" name="product[Desc]" <%= placeholder("Desc") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="product[Qty]" class="fieldLabel">Qty</label>
+            <input type="text" id="product[Qty]" name="product[Qty]" <%= placeholder("Qty") %> />
+          </div>
+      
+
+      <input type="submit" value="Create"/>
+    </form>
+  </div>
+
+</div>
