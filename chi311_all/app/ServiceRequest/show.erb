@@ -1,0 +1,164 @@
+<div data-role="page" data-add-back-btn="false">
+
+  <div data-role="header" data-position="inline">
+    <h1><%= @servicerequest.service_request_id %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="arrow-l" data-direction="reverse">
+      Back
+    </a>
+    <a href="<%= url_for :action => :edit, :id => @servicerequest.object %>" class="ui-btn-right" data-icon="star">
+      Edit
+    </a>
+  </div>
+
+  <div data-role="content">
+    <ul data-role="listview">
+      
+          <li>
+            <div class="itemLabel">ServiceRequestId</div>
+            <div class="itemValue"><%= @servicerequest.service_request_id %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">ServiceCode</div>
+            <div class="itemValue"><%= @servicerequest.service_code %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Status</div>
+            <div class="itemValue"><%= @servicerequest.status %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">StatusNotes</div>
+            <div class="itemValue"><%= @servicerequest.status_notes %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">ServiceName</div>
+            <div class="itemValue"><%= @servicerequest.service_name %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">ServiceCode</div>
+            <div class="itemValue"><%= @servicerequest.service_code %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Description</div>
+            <div class="itemValue"><%= @servicerequest.description %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">AgencyResponsible</div>
+            <div class="itemValue"><%= @servicerequest.agency_responsible %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">ServiceNotice</div>
+            <div class="itemValue"><%= @servicerequest.service_notice %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">RequestedDatetime</div>
+            <div class="itemValue"><%= @servicerequest.requested_datetime %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">UpdatedDatetime</div>
+            <div class="itemValue"><%= @servicerequest.updated_datetime %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">ExpectedDatetime</div>
+            <div class="itemValue"><%= @servicerequest.expected_datetime %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Address</div>
+            <div class="itemValue"><%= @servicerequest.address %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">AddressId</div>
+            <div class="itemValue"><%= @servicerequest.address_id %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Zipcode</div>
+            <div class="itemValue"><%= @servicerequest.zipcode %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Lat</div>
+            <div class="itemValue"><%= @servicerequest.lat %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Long</div>
+            <div class="itemValue"><%= @servicerequest.long %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">MediaUrl</div>
+            <div class="itemValue"><%= @servicerequest.media_url %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Channel</div>
+            <div class="itemValue"><%= @servicerequest.channel %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Ward</div>
+            <div class="itemValue"><%= @servicerequest.ward %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">PoliceDistrict</div>
+            <div class="itemValue"><%= @servicerequest.police_district %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Duplicate</div>
+            <div class="itemValue"><%= @servicerequest.duplicate %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">ParentServiceRequestId</div>
+            <div class="itemValue"><%= @servicerequest.parent_service_request_id %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Notes</div>
+            <div class="itemValue"><%= @servicerequest.notes %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">NotesSummary</div>
+            <div class="itemValue"><%= @servicerequest.notes_summary %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">NotesType</div>
+            <div class="itemValue"><%= @servicerequest.notes_type %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">NotesDescription</div>
+            <div class="itemValue"><%= @servicerequest.notes_description %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">NotesExtendedAttributes</div>
+            <div class="itemValue"><%= @servicerequest.notes_extended_attributes %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">NotesDatetime</div>
+            <div class="itemValue"><%= @servicerequest.notes_datetime %></div>
+          </li>
+      
+    </ul>
+  </div>
+
+</div>

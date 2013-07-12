@@ -1,0 +1,58 @@
+<div data-role="page" data-add-back-btn="false">
+
+  <div data-role="header" data-position="inline">
+    <h1><%= @service.service_name %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="arrow-l" data-direction="reverse">
+      Back
+    </a>
+    <a href="<%= url_for :action => :edit, :id => @service.object %>" class="ui-btn-right" data-icon="star">
+      Edit
+    </a>
+  </div>
+
+  <div data-role="content">
+    <ul data-role="listview">
+        <li>
+          <a href="<%= url_for :action => :getServiceRequestsForCode, :id => @service.service_code.to_s() %>" class=""> Get Current Service Requests</a>    
+        </li>          
+      
+          <li>
+            <div class="itemLabel">ServiceCode</div>
+            <div class="itemValue"><%= @service.service_code %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">ServiceName</div>
+            <div class="itemValue"><%= @service.service_name %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Description</div>
+            <div class="itemValue"><%= @service.description %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Metadata</div>
+            <div class="itemValue"><%= @service.metadata %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Type</div>
+            <div class="itemValue"><%= @service.type %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Keywords</div>
+            <div class="itemValue"><%= @service.keywords %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Group</div>
+            <div class="itemValue"><%= @service.group %></div>
+          </li>
+
+    </ul>
+
+  </div>
+
+</div>

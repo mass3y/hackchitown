@@ -1,0 +1,166 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>Edit <%= @servicerequest.service_request_id %></h1>
+    <a href="<%= url_for :action => :show, :id => @servicerequest.object %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+    <a href="<%= url_for :action => :delete, :id => @servicerequest.object %>" class="ui-btn-right" data-icon="delete" data-direction="reverse">
+      Delete
+    </a>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :update %>">
+      <input type="hidden" name="id" value="<%= @servicerequest.object %>"/>
+      
+          <div data-role="fieldcontain">
+            <label for="servicerequest[service_request_id]" class="fieldLabel">Service request</label>
+            <input type="text" id="servicerequest[service_request_id]" name="servicerequest[service_request_id]" value="<%= @servicerequest.service_request_id %>" <%= placeholder( "Service request" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="servicerequest[service_code]" class="fieldLabel">Service code</label>
+            <input type="text" id="servicerequest[service_code]" name="servicerequest[service_code]" value="<%= @servicerequest.service_code %>" <%= placeholder( "Service code" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="servicerequest[status]" class="fieldLabel">Status</label>
+            <input type="text" id="servicerequest[status]" name="servicerequest[status]" value="<%= @servicerequest.status %>" <%= placeholder( "Status" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="servicerequest[status_notes]" class="fieldLabel">Status notes</label>
+            <input type="text" id="servicerequest[status_notes]" name="servicerequest[status_notes]" value="<%= @servicerequest.status_notes %>" <%= placeholder( "Status notes" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="servicerequest[service_name]" class="fieldLabel">Service name</label>
+            <input type="text" id="servicerequest[service_name]" name="servicerequest[service_name]" value="<%= @servicerequest.service_name %>" <%= placeholder( "Service name" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="servicerequest[service_code]" class="fieldLabel">Service code</label>
+            <input type="text" id="servicerequest[service_code]" name="servicerequest[service_code]" value="<%= @servicerequest.service_code %>" <%= placeholder( "Service code" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="servicerequest[description]" class="fieldLabel">Description</label>
+            <input type="text" id="servicerequest[description]" name="servicerequest[description]" value="<%= @servicerequest.description %>" <%= placeholder( "Description" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="servicerequest[agency_responsible]" class="fieldLabel">Agency responsible</label>
+            <input type="text" id="servicerequest[agency_responsible]" name="servicerequest[agency_responsible]" value="<%= @servicerequest.agency_responsible %>" <%= placeholder( "Agency responsible" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="servicerequest[service_notice]" class="fieldLabel">Service notice</label>
+            <input type="text" id="servicerequest[service_notice]" name="servicerequest[service_notice]" value="<%= @servicerequest.service_notice %>" <%= placeholder( "Service notice" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="servicerequest[requested_datetime]" class="fieldLabel">Requested datetime</label>
+            <input type="text" id="servicerequest[requested_datetime]" name="servicerequest[requested_datetime]" value="<%= @servicerequest.requested_datetime %>" <%= placeholder( "Requested datetime" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="servicerequest[updated_datetime]" class="fieldLabel">Updated datetime</label>
+            <input type="text" id="servicerequest[updated_datetime]" name="servicerequest[updated_datetime]" value="<%= @servicerequest.updated_datetime %>" <%= placeholder( "Updated datetime" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="servicerequest[expected_datetime]" class="fieldLabel">Expected datetime</label>
+            <input type="text" id="servicerequest[expected_datetime]" name="servicerequest[expected_datetime]" value="<%= @servicerequest.expected_datetime %>" <%= placeholder( "Expected datetime" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="servicerequest[address]" class="fieldLabel">Address</label>
+            <input type="text" id="servicerequest[address]" name="servicerequest[address]" value="<%= @servicerequest.address %>" <%= placeholder( "Address" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="servicerequest[address_id]" class="fieldLabel">Address</label>
+            <input type="text" id="servicerequest[address_id]" name="servicerequest[address_id]" value="<%= @servicerequest.address_id %>" <%= placeholder( "Address" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="servicerequest[zipcode]" class="fieldLabel">Zipcode</label>
+            <input type="text" id="servicerequest[zipcode]" name="servicerequest[zipcode]" value="<%= @servicerequest.zipcode %>" <%= placeholder( "Zipcode" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="servicerequest[lat]" class="fieldLabel">Lat</label>
+            <input type="text" id="servicerequest[lat]" name="servicerequest[lat]" value="<%= @servicerequest.lat %>" <%= placeholder( "Lat" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="servicerequest[long]" class="fieldLabel">Long</label>
+            <input type="text" id="servicerequest[long]" name="servicerequest[long]" value="<%= @servicerequest.long %>" <%= placeholder( "Long" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="servicerequest[media_url]" class="fieldLabel">Media url</label>
+            <input type="text" id="servicerequest[media_url]" name="servicerequest[media_url]" value="<%= @servicerequest.media_url %>" <%= placeholder( "Media url" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="servicerequest[channel]" class="fieldLabel">Channel</label>
+            <input type="text" id="servicerequest[channel]" name="servicerequest[channel]" value="<%= @servicerequest.channel %>" <%= placeholder( "Channel" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="servicerequest[ward]" class="fieldLabel">Ward</label>
+            <input type="text" id="servicerequest[ward]" name="servicerequest[ward]" value="<%= @servicerequest.ward %>" <%= placeholder( "Ward" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="servicerequest[police_district]" class="fieldLabel">Police district</label>
+            <input type="text" id="servicerequest[police_district]" name="servicerequest[police_district]" value="<%= @servicerequest.police_district %>" <%= placeholder( "Police district" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="servicerequest[duplicate]" class="fieldLabel">Duplicate</label>
+            <input type="text" id="servicerequest[duplicate]" name="servicerequest[duplicate]" value="<%= @servicerequest.duplicate %>" <%= placeholder( "Duplicate" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="servicerequest[parent_service_request_id]" class="fieldLabel">Parent service request</label>
+            <input type="text" id="servicerequest[parent_service_request_id]" name="servicerequest[parent_service_request_id]" value="<%= @servicerequest.parent_service_request_id %>" <%= placeholder( "Parent service request" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="servicerequest[notes]" class="fieldLabel">Notes</label>
+            <input type="text" id="servicerequest[notes]" name="servicerequest[notes]" value="<%= @servicerequest.notes %>" <%= placeholder( "Notes" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="servicerequest[notes_summary]" class="fieldLabel">Notes summary</label>
+            <input type="text" id="servicerequest[notes_summary]" name="servicerequest[notes_summary]" value="<%= @servicerequest.notes_summary %>" <%= placeholder( "Notes summary" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="servicerequest[notes_type]" class="fieldLabel">Notes type</label>
+            <input type="text" id="servicerequest[notes_type]" name="servicerequest[notes_type]" value="<%= @servicerequest.notes_type %>" <%= placeholder( "Notes type" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="servicerequest[notes_description]" class="fieldLabel">Notes description</label>
+            <input type="text" id="servicerequest[notes_description]" name="servicerequest[notes_description]" value="<%= @servicerequest.notes_description %>" <%= placeholder( "Notes description" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="servicerequest[notes_extended_attributes]" class="fieldLabel">Notes extended attributes</label>
+            <input type="text" id="servicerequest[notes_extended_attributes]" name="servicerequest[notes_extended_attributes]" value="<%= @servicerequest.notes_extended_attributes %>" <%= placeholder( "Notes extended attributes" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="servicerequest[notes_datetime]" class="fieldLabel">Notes datetime</label>
+            <input type="text" id="servicerequest[notes_datetime]" name="servicerequest[notes_datetime]" value="<%= @servicerequest.notes_datetime %>" <%= placeholder( "Notes datetime" ) %> />
+          </div>
+      
+      <input type="submit" value="Update"/>
+    </form>
+  </div>
+
+</div>

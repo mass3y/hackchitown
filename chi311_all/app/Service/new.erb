@@ -1,0 +1,55 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>New <%= @service.title %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :create %>">
+      <input type="hidden" name="id" value="<%= @service.object %>"/>
+
+      
+          <div data-role="fieldcontain">
+            <label for="service[service_code]" class="fieldLabel">Service code</label>
+            <input type="text" id="service[service_code]" name="service[service_code]" <%= placeholder("Service code") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="service[service_name]" class="fieldLabel">Service name</label>
+            <input type="text" id="service[service_name]" name="service[service_name]" <%= placeholder("Service name") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="service[description]" class="fieldLabel">Description</label>
+            <input type="text" id="service[description]" name="service[description]" <%= placeholder("Description") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="service[metadata]" class="fieldLabel">Metadata</label>
+            <input type="text" id="service[metadata]" name="service[metadata]" <%= placeholder("Metadata") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="service[type]" class="fieldLabel">Type</label>
+            <input type="text" id="service[type]" name="service[type]" <%= placeholder("Type") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="service[keywords]" class="fieldLabel">Keywords</label>
+            <input type="text" id="service[keywords]" name="service[keywords]" <%= placeholder("Keywords") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="service[group]" class="fieldLabel">Group</label>
+            <input type="text" id="service[group]" name="service[group]" <%= placeholder("Group") %> />
+          </div>
+      
+
+      <input type="submit" value="Create"/>
+    </form>
+  </div>
+
+</div>
